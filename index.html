@@ -299,11 +299,11 @@ h1, h2, h3 {
  <h1>H o  w   t o  achieve h ig h professional grade Look for Hollywood Vfx as a beginner.</h1>
         <h1>Digital Creator Masterclass</h1>
         <p>Master Photoshop, Lightroom, Illustrator, Premiere, and After Effects — even if you're just starting.</p>
-        <div class="form-box">
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <a class="btn" href="#">JOIN NOW</a>
-        </div>
+       <div class="form-box">
+    <input id="name" type="text" placeholder="Your Name" required>
+    <input id="email" type="email" placeholder="Your Email" required>
+    <button class="btn" onclick="submitLead()">JOIN NOW</button>
+</div>
     </div>
 
     <div class="hero-image">
@@ -390,5 +390,41 @@ setInterval(() => {
 },1000);
 </script>
 
+<script>
+const supabaseUrl = "https://vyddfaxugzbfzrsqxwlh.supabase.co";
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ5ZGRmYXh1Z3piZnpyc3F4d2xoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc3MDQxNDIsImV4cCI6MjA5MzI4MDE0Mn0.mz9e5kwzSHm7zpGwrTXQ3cDiu6s5CF2CB3DRn4xuI4A";
+
+const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+</script>
+
+<script>
+async function submitLead() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+
+    if (!name || !email) {
+        alert("Please fill all fields");
+        return;
+    }
+
+    const { data, error } = await supabase
+        .from("Leads")
+        .insert([
+            { name: name, email: email }
+        ]);
+
+    if (error) {
+        console.error(error);
+        alert("Something went wrong");
+    } else {
+        alert("You're in! 🚀");
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+    }
+}
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 </body>
 </html>
