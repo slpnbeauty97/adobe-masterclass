@@ -377,8 +377,11 @@ h1, h2, h3 {
     <a class="btn" href="#">JOIN NOW</a>
 </section>
 
+<!-- LOAD SUPABASE FIRST -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
 <script>
-// COUNTDOWN TIMER
+// COUNTDOWN TIMER (UNCHANGED)
 const eventDate = new Date().getTime() + (11*24*60*60*1000);
 setInterval(() => {
     const now = new Date().getTime();
@@ -391,14 +394,18 @@ setInterval(() => {
 </script>
 
 <script>
-const supabaseUrl = "https://vyddfaxugzbfzrsqxwlh.supabase.co";
-const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ5ZGRmYXh1Z3piZnpyc3F4d2xoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc3MDQxNDIsImV4cCI6MjA5MzI4MDE0Mn0.mz9e5kwzSHm7zpGwrTXQ3cDiu6s5CF2CB3DRn4xuI4A";
+let supabase;
 
-const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
-</script>
+document.addEventListener("DOMContentLoaded", () => {
+   const supabaseUrl = "https://vyddfaxugzbfzrsqxwlh.supabase.co"; 
+    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ5ZGRmYXh1Z3piZnpyc3F4d2xoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc3MDQxNDIsImV4cCI6MjA5MzI4MDE0Mn0.mz9e5kwzSHm7zpGwrTXQ3cDiu6s5CF2CB3DRn4xuI4A";
 
-<script>
+    supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+});
+
 async function submitLead() {
+    console.log("Clicked"); // debug
+
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
 
@@ -415,7 +422,7 @@ async function submitLead() {
 
     if (error) {
         console.error(error);
-        alert("Something went wrong");
+        alert("Error: " + error.message);
     } else {
         alert("You're in! 🚀");
         document.getElementById("name").value = "";
@@ -423,8 +430,3 @@ async function submitLead() {
     }
 }
 </script>
-
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-</body>
-</html>
