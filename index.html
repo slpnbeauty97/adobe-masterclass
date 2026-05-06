@@ -430,3 +430,31 @@ async function submitLead() {
     }
 }
 </script>
+    <script>
+document.getElementById("joinBtn").addEventListener("click", submitLead);
+
+async function submitLead() {
+    console.log("Clicked");
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+
+    if (!name || !email) {
+        alert("Please fill all fields");
+        return;
+    }
+
+    const { data, error } = await supabase
+        .from("Leads")
+        .insert([{ name, email }]);
+
+    if (error) {
+        console.error(error);
+        alert("Error: " + error.message);
+    } else {
+        alert("You're in! 🚀");
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+    }
+}
+</script>
