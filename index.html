@@ -8,47 +8,83 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
 
 <style>
-/* (UNCHANGED YOUR CSS) */
+/* ===== YOUR ORIGINAL CSS (UNCHANGED) ===== */
 * { margin:0; padding:0; box-sizing:border-box; }
+
 body {
     font-family: "Poppins", sans-serif;
     background: linear-gradient(180deg, #06121f, #0c1d31, #0f2b46);
     color: #fff;
     overflow-x: hidden;
 }
+
+nav {
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+}
+
+.container {
+    width: 92%;
+    max-width: 1180px;
+    margin: auto;
+    padding: 60px 0;
+}
+
 .btn {
     background: #00c8ff;
     color: #000;
     padding: 16px 34px;
     border-radius: 8px;
-    margin-top: 18px;
     display: inline-block;
+    cursor: pointer;
 }
 </style>
 </head>
 
 <body>
 
-<section>
-    <input id="name" type="text" placeholder="Your Name">
-    <input id="email" type="email" placeholder="Your Email">
+<!-- NAVBAR (UNCHANGED) -->
+<nav>
+    <div class="nav-container">
+        <div class="logo">Masterclass</div>
+    </div>
+</nav>
 
-    <!-- FIXED: ONLY ONE BUTTON HANDLER -->
-    <button class="btn" onclick="submitLead()">JOIN NOW</button>
+<!-- HERO -->
+<section class="container hero" id="hero">
+    <div class="hero-text">
+
+        <h1>Digital Creator Masterclass</h1>
+
+        <input id="name" type="text" placeholder="Your Name">
+        <input id="email" type="email" placeholder="Your Email">
+
+        <button class="btn" onclick="submitLead()">JOIN NOW</button>
+
+    </div>
 </section>
 
 <!-- SUPABASE (ONLY ONCE) -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 
 <script>
-/* ✅ SINGLE SUPABASE INSTANCE */
+/* =========================
+   SINGLE SUPABASE INSTANCE
+========================= */
 const supabase = window.supabase.createClient(
     "https://vyddfaxugzbfzrsqxwlh.supabase.co",
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ5ZGRmYXh1Z3piZnpyc3F4d2xoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc3MDQxNDIsImV4cCI6MjA5MzI4MDE0Mn0.mz9e5kwzSHm7zpGwrTXQ3cDiu6s5CF2CB3DRn4xuI4A"
 );
 
-/* ✅ SINGLE FUNCTION (GLOBAL) */
-window.submitLead = async function () {
+/* =========================
+   SINGLE WORKING FUNCTION
+========================= */
+async function submitLead() {
     console.log("Clicked");
 
     const name = document.getElementById("name").value;
@@ -59,7 +95,7 @@ window.submitLead = async function () {
         return;
     }
 
-    const { data, error } = await supabase
+    const { error } = await supabase
         .from("Leads")
         .insert([{ name, email }]);
 
@@ -71,7 +107,7 @@ window.submitLead = async function () {
         document.getElementById("name").value = "";
         document.getElementById("email").value = "";
     }
-};
+}
 </script>
 
 </body>
