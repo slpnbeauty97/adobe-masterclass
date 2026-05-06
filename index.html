@@ -1,2 +1,431 @@
 <!DOCTYPE html>
-<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Digital Creator Masterclass</title> <!-- STRANGER THINGS FONT --> <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet"> <style> /* ===== RESET ===== */ * { margin:0; padding:0; box-sizing:border-box; } body { font-family: "Poppins", sans-serif; background: linear-gradient(180deg, #06121f, #0c1d31, #0f2b46); color: #fff; overflow-x: hidden; } /* NAVBAR */ nav { width: 100%; background: rgba(0,0,0,0.3); position: fixed; top: 0; left: 0; z-index: 999; backdrop-filter: blur(10px); box-shadow: 0 2px 10px rgba(0,0,0,0.3); } nav .nav-container { max-width: 1180px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 15px 0; color: #fff; } nav .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: 1px; font-family: 'Cinzel', serif; /* Stranger Things font */ text-shadow: 0 0 12px #00c8ff; } nav ul { list-style: none; display: flex; gap: 25px; } nav ul li a { color: #fff; font-weight: 500; transition: 0.3s; } nav ul li a:hover { color: #00c8ff; } /* HEADINGS */ h1, h2, h3 { font-family: 'Cinzel', serif; /* Stranger Things font */ font-weight: 700; text-shadow: 0 0 12px #00c8ff; } /* CONTAINER */ .container { width: 92%; max-width: 1180px; margin: auto; padding: 60px 0; } /* BUTTON */ .btn { background: #00c8ff; color: #000; padding: 16px 34px; display: inline-block; border-radius: 8px; margin-top: 18px; text-decoration: none; font-size: 1.1rem; font-weight: 700; transition: 0.3s; box-shadow: 0 0 20px #00c8ffa8; } .btn:hover { box-shadow: 0 0 28px #00c8ff; background: #6addff; } /* HERO SECTION */ .hero { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; position: relative; padding: 120px 0 60px 0; text-align: center; } .hero-text { flex: 1 1 500px; max-width: 600px; margin:auto; } .hero-text h1 { font-size: 2.8rem; } .hero-text p { font-size: 1.1rem; margin-top: 15px; line-height: 1.5; } .form-box { width: 380px; margin-top: 20px; background: rgba(255,255,255,0.1); padding: 25px; border-radius: 12px; backdrop-filter: blur(10px); box-shadow: 0 0 30px rgba(0,200,255,0.35); } .form-box input { width: 100%; padding: 14px; margin: 10px 0; border-radius: 6px; border: none; font-size: 1rem; } /* HERO IMAGE */ .hero-image { flex: 1 1 400px; position: relative; display: flex; justify-content: center; margin-top: 40px; } .hero-image img { width: 320px; border-radius: 15px; filter: drop-shadow(0 0 25px rgba(0, 255, 255, 0.8)); position: relative; z-index: 2; } /* FLOATING ICONS */ .floating-icons { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; z-index: 1; } .floating-icons img { position: absolute; width: 70px; animation: float 3.2s ease-in-out infinite; filter: drop-shadow(0 0 12px #00c8ff); } .ps { top: -30px; left: 140px; animation-delay: 0s; } .ai { top: -20px; left: -140px; animation-delay: 0.4s; } .pr { top: 120px; left: 120px; animation-delay: 1s; } .ae { top: 100px; left: -120px; animation-delay: 0.7s; } @keyframes float { 0% { transform: translateY(0); } 50% { transform: translateY(-14px); } 100% { transform: translateY(0); } } /* LEARN SECTION */ .learn-section { text-align: center; margin-top: 80px; } .learn-cards { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px; } .learn-card { width: 300px; background: rgba(255,255,255,0.08); padding: 22px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,200,255,0.25); text-align: center; } /* EVENT IS FOR YOU IF */ .forwho-section { background: rgba(255,255,255,0.05); padding: 60px 20px; border-radius: 20px; box-shadow: 0 0 25px rgba(0,200,255,0.22); margin-top: 80px; } .forwho-items { display: flex; gap: 25px; justify-content: center; flex-wrap: wrap; margin-top: 30px; } .forwho-item { width: 280px; background: rgba(0,0,0,0.25); padding: 20px 25px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,200,255,0.18); text-align: center; } /* INSTRUCTOR */ .instructor { text-align: center; margin-top: 80px; } .instructor img { width: 280px; border-radius: 18px; filter: drop-shadow(0 0 20px #00c8ff); } /* COUNTDOWN */ .countdown { display: flex; justify-content: center; gap: 25px; margin-top: 40px; flex-wrap: wrap; } .cd-box { background: rgba(255,255,255,0.07); width: 110px; padding: 18px; border-radius: 12px; box-shadow: 0 0 18px rgba(0,200,255,0.35); font-size: 1.3rem; } /* RESPONSIVE */ @media (max-width: 900px) { .hero { flex-direction: column-reverse; text-align: center; } .hero-text, .hero-image { max-width: 100%; } .floating-icons img { width: 55px; } } </style> </head> <body> <!-- NAVBAR --> <nav> <div class="nav-container"> <div class="logo">Masterclass</div> <ul> <li><a href="#hero">Home</a></li> <li><a href="#learn">Learn</a></li> <li><a href="#forwho">For You</a></li> <li><a href="#instructor">Instructor</a></li> <li><a href="#countdown">Countdown</a></li> </ul> </div> </nav> <!-- HERO SECTION --> <section class="container hero" id="hero"> <div class="hero-text"> <h1>H o w t o achieve h ig h professional grade Look for Hollywood Vfx as a beginner.</h1> <h1>Digital Creator Masterclass</h1> <p>Master Photoshop, Lightroom, Illustrator, Premiere, and After Effects — even if you're just starting.</p> <div class="form-box"> <input id="name" type="text" placeholder="Your Name" required> <input id="email" type="email" placeholder="Your Email" required> <button class="btn" onclick="submitLead()">JOIN NOW</button> </div> </div> <div class="hero-image"> <img src="myprofile7 (2).png" alt="Instructor"> <div class="floating-icons"> <img class="ps" src="adobe-photoshop-svgrepo-com.svg" alt="Photoshop"> <img class="ai" src="adobe-illustrator-cc-logo-svgrepo-com.svg" alt="Illustrator"> <img class="ae" src="adobe-photoshop-svgrepo-com.svg" alt="After Effects"> <img class="pr" src="adobe-xd-logo-svgrepo-com.svg" alt="Premiere"> </div> </div> </section> <!-- WHAT YOU WILL LEARN --> <section class="container learn-section" id="learn"> <h2>What You Will Learn</h2> <div class="learn-cards"> <div class="learn-card"> <h3>Photoshop & Lightroom</h3> <p>Photo manipulation, color grading, cinematic effects, and professional editing.</p> </div> <div class="learn-card"> <h3>Complete Adobe Workflow</h3> <p>Learn professional processes to work efficiently and produce stunning results.</p> </div> <div class="learn-card"> <h3>Content Creation</h3> <p>Build standout creative content that gets noticed in the industry.</p> </div> </div> <a class="btn" href="#">JOIN NOW</a> </section> <!-- EVENT IS FOR YOU IF --> <section class="container forwho-section" id="forwho"> <h2>This Event Is For You If…</h2> <div class="forwho-items"> <div class="forwho-item"> <h3>01</h3> <p>You're starting out and want to master the Adobe Suite.</p> </div> <div class="forwho-item"> <h3>02</h3> <p>You want to improve your workflow and professional results.</p> </div> <div class="forwho-item"> <h3>03</h3> <p>You want to stand out in the creative market and grow as a designer.</p> </div> </div> </section> <!-- INSTRUCTOR --> <section class="container instructor" id="instructor"> <h2>Meet Your Instructor</h2> <img src="myprofile7.png" alt="Instructor"> <p style="max-width: 700px; margin:20px auto;"> Professional digital creator specialized in Adobe Photoshop, Lightroom, Illustrator, Premiere, After Effects, and advanced design techniques. </p> </section> <!-- COUNTDOWN --> <section class="container" id="countdown"> <h2>Event Starts In…</h2> <div class="countdown"> <div class="cd-box"><span id="days">00</span><br>Days</div> <div class="cd-box"><span id="hours">00</span><br>Hours</div> <div class="cd-box"><span id="minutes">00</span><br>Minutes</div> <div class="cd-box"><span id="seconds">00</span><br>Seconds</div> </div> <a class="btn" href="#">JOIN NOW</a> </section> <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script> <script> let supabase = window.supabase.createClient( "https://vyddfaxugzbfzrsqxwlh.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ5ZGRmYXh1Z3piZnpyc3F4d2xoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc3MDQxNDIsImV4cCI6MjA5MzI4MDE0Mn0.mz9e5kwzSHm7zpGwrTXQ3cDiu6s5CF2CB3DRn4xuI4A" ); // MAKE IT GLOBAL (VERY IMPORTANT) window.submitLead = async function () { console.log("Clicked"); const name = document.getElementById("name").value; const email = document.getElementById("email").value; if (!name || !email) { alert("Please fill all fields"); return; } const { data, error } = await supabase .from("Leads") .insert([{ name, email }]); if (error) { console.error(error); alert("Error: " + error.message); } else { alert("You're in! 🚀"); document.getElementById("name").value = ""; document.getElementById("email").value = ""; } }; </script> <script> let supabase; document.addEventListener("DOMContentLoaded", () => { const supabaseUrl = "https://vyddfaxugzbfzrsqxwlh.supabase.co"; const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ5ZGRmYXh1Z3piZnpyc3F4d2xoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc3MDQxNDIsImV4cCI6MjA5MzI4MDE0Mn0.mz9e5kwzSHm7zpGwrTXQ3cDiu6s5CF2CB3DRn4xuI4A"; supabase = window.supabase.createClient(supabaseUrl, supabaseKey); }); async function submitLead() { console.log("Clicked"); // debug const name = document.getElementById("name").value; const email = document.getElementById("email").value; if (!name || !email) { alert("Please fill all fields"); return; } const { data, error } = await supabase .from("Leads") .insert([ { name: name, email: email } ]); if (error) { console.error(error); alert("Error: " + error.message); } else { alert("You're in! 🚀"); document.getElementById("name").value = ""; document.getElementById("email").value = ""; } } </script> <script> document.getElementById("joinBtn").addEventListener("click", submitLead); async function submitLead() { console.log("Clicked"); const name = document.getElementById("name").value; const email = document.getElementById("email").value; if (!name || !email) { alert("Please fill all fields"); return; } const { data, error } = await supabase .from("Leads") .insert([{ name, email }]); if (error) { console.error(error); alert("Error: " + error.message); } else { alert("You're in! 🚀"); document.getElementById("name").value = ""; document.getElementById("email").value = ""; } } </script>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Creator Masterclass</title>
+
+<!-- STRANGER THINGS FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+
+<style>
+/* ===== RESET ===== */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(180deg, #06121f, #0c1d31, #0f2b46);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+nav .nav-container {
+    max-width: 1180px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    color: #fff;
+}
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Cinzel', serif; /* Stranger Things font */
+    text-shadow: 0 0 12px #00c8ff;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+nav ul li a {
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    color: #00c8ff;
+}
+
+/* HEADINGS */
+h1, h2, h3 {
+    font-family: 'Cinzel', serif; /* Stranger Things font */
+    font-weight: 700;
+    text-shadow: 0 0 12px #00c8ff;
+}
+
+/* CONTAINER */
+.container {
+    width: 92%;
+    max-width: 1180px;
+    margin: auto;
+    padding: 60px 0;
+}
+
+/* BUTTON */
+.btn {
+    background: #00c8ff;
+    color: #000;
+    padding: 16px 34px;
+    display: inline-block;
+    border-radius: 8px;
+    margin-top: 18px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: 0.3s;
+    box-shadow: 0 0 20px #00c8ffa8;
+}
+.btn:hover {
+    box-shadow: 0 0 28px #00c8ff;
+    background: #6addff;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 120px 0 60px 0;
+    text-align: center;
+}
+
+.hero-text {
+    flex: 1 1 500px;
+    max-width: 600px;
+    margin:auto;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+.form-box {
+    width: 380px;
+    margin-top: 20px;
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0,200,255,0.35);
+}
+
+.form-box input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+}
+
+/* HERO IMAGE */
+.hero-image {
+    flex: 1 1 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.hero-image img {
+    width: 320px;
+    border-radius: 15px;
+    filter: drop-shadow(0 0 25px rgba(0, 255, 255, 0.8));
+    position: relative;
+    z-index: 2;
+}
+
+/* FLOATING ICONS */
+.floating-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-icons img {
+    position: absolute;
+    width: 70px;
+    animation: float 3.2s ease-in-out infinite;
+    filter: drop-shadow(0 0 12px #00c8ff);
+}
+
+.ps { top: -30px; left: 140px; animation-delay: 0s; }
+.ai { top: -20px; left: -140px; animation-delay: 0.4s; }
+.pr { top: 120px; left: 120px; animation-delay: 1s; }
+.ae { top: 100px; left: -120px; animation-delay: 0.7s; }
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+    100% { transform: translateY(0); }
+}
+
+/* LEARN SECTION */
+.learn-section {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.learn-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.learn-card {
+    width: 300px;
+    background: rgba(255,255,255,0.08);
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,200,255,0.25);
+    text-align: center;
+}
+
+/* EVENT IS FOR YOU IF */
+.forwho-section {
+    background: rgba(255,255,255,0.05);
+    padding: 60px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0,200,255,0.22);
+    margin-top: 80px;
+}
+
+.forwho-items {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.forwho-item {
+    width: 280px;
+    background: rgba(0,0,0,0.25);
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,200,255,0.18);
+    text-align: center;
+}
+
+/* INSTRUCTOR */
+.instructor {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.instructor img {
+    width: 280px;
+    border-radius: 18px;
+    filter: drop-shadow(0 0 20px #00c8ff);
+}
+
+/* COUNTDOWN */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.cd-box {
+    background: rgba(255,255,255,0.07);
+    width: 110px;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 0 18px rgba(0,200,255,0.35);
+    font-size: 1.3rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .hero-text, .hero-image {
+        max-width: 100%;
+    }
+    .floating-icons img { width: 55px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="nav-container">
+        <div class="logo">Masterclass</div>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#learn">Learn</a></li>
+            <li><a href="#forwho">For You</a></li>
+            <li><a href="#instructor">Instructor</a></li>
+            <li><a href="#countdown">Countdown</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="container hero" id="hero">
+    <div class="hero-text">
+ <h1>H o  w   t o  achieve h ig h professional grade Look for Hollywood Vfx as a beginner.</h1>
+        <h1>Digital Creator Masterclass</h1>
+        <p>Master Photoshop, Lightroom, Illustrator, Premiere, and After Effects — even if you're just starting.</p>
+       <div class="form-box">
+    <input id="name" type="text" placeholder="Your Name" required>
+    <input id="email" type="email" placeholder="Your Email" required>
+    <button class="btn" onclick="submitLead()">JOIN NOW</button>
+</div>
+    </div>
+
+    <div class="hero-image">
+        <img src="myprofile7 (2).png" alt="Instructor">
+        <div class="floating-icons">
+            <img class="ps" src="adobe-photoshop-svgrepo-com.svg" alt="Photoshop">
+            <img class="ai" src="adobe-illustrator-cc-logo-svgrepo-com.svg" alt="Illustrator">
+            <img class="ae" src="adobe-photoshop-svgrepo-com.svg" alt="After Effects">
+            <img class="pr" src="adobe-xd-logo-svgrepo-com.svg" alt="Premiere">
+        </div>
+    </div>
+</section>
+
+<!-- WHAT YOU WILL LEARN -->
+<section class="container learn-section" id="learn">
+    <h2>What You Will Learn</h2>
+    <div class="learn-cards">
+        <div class="learn-card">
+            <h3>Photoshop & Lightroom</h3>
+            <p>Photo manipulation, color grading, cinematic effects, and professional editing.</p>
+        </div>
+        <div class="learn-card">
+            <h3>Complete Adobe Workflow</h3>
+            <p>Learn professional processes to work efficiently and produce stunning results.</p>
+        </div>
+        <div class="learn-card">
+            <h3>Content Creation</h3>
+            <p>Build standout creative content that gets noticed in the industry.</p>
+        </div>
+    </div>
+    <a class="btn" href="#">JOIN NOW</a>
+</section>
+
+<!-- EVENT IS FOR YOU IF -->
+<section class="container forwho-section" id="forwho">
+    <h2>This Event Is For You If…</h2>
+    <div class="forwho-items">
+        <div class="forwho-item">
+            <h3>01</h3>
+            <p>You're starting out and want to master the Adobe Suite.</p>
+        </div>
+        <div class="forwho-item">
+            <h3>02</h3>
+            <p>You want to improve your workflow and professional results.</p>
+        </div>
+        <div class="forwho-item">
+            <h3>03</h3>
+            <p>You want to stand out in the creative market and grow as a designer.</p>
+        </div>
+    </div>
+</section>
+
+<!-- INSTRUCTOR -->
+<section class="container instructor" id="instructor">
+    <h2>Meet Your Instructor</h2>
+    <img src="myprofile7.png" alt="Instructor">
+    <p style="max-width: 700px; margin:20px auto;">
+        Professional digital creator specialized in Adobe Photoshop, Lightroom, Illustrator, Premiere, After Effects, and advanced design techniques.
+    </p>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="container" id="countdown">
+    <h2>Event Starts In…</h2>
+    <div class="countdown">
+        <div class="cd-box"><span id="days">00</span><br>Days</div>
+        <div class="cd-box"><span id="hours">00</span><br>Hours</div>
+        <div class="cd-box"><span id="minutes">00</span><br>Minutes</div>
+        <div class="cd-box"><span id="seconds">00</span><br>Seconds</div>
+    </div>
+    <a class="btn" href="#">JOIN NOW</a>
+</section>
+
+<script>
+// COUNTDOWN TIMER
+const eventDate = new Date().getTime() + (11*24*60*60*1000);
+setInterval(() => {
+    const now = new Date().getTime();
+    const diff = eventDate - now;
+    document.getElementById("days").innerText = Math.floor(diff/(1000*60*60*24));
+    document.getElementById("hours").innerText = Math.floor((diff/(1000*60*60))%24);
+    document.getElementById("minutes").innerText = Math.floor((diff/(1000*60))%60);
+    document.getElementById("seconds").innerText = Math.floor((diff/1000)%60);
+},1000);
+</script>
+
+<!-- SUPABASE (ONLY ONCE) -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+<script>
+/* ✅ SINGLE SUPABASE INSTANCE */
+const supabase = window.supabase.createClient(
+    "https://vyddfaxugzbfzrsqxwlh.supabase.co",
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ5ZGRmYXh1Z3piZnpyc3F4d2xoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc3MDQxNDIsImV4cCI6MjA5MzI4MDE0Mn0.mz9e5kwzSHm7zpGwrTXQ3cDiu6s5CF2CB3DRn4xuI4A"
+);
+
+/* ✅ SINGLE FUNCTION (GLOBAL) */
+window.submitLead = async function () {
+    console.log("Clicked");
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+
+    if (!name || !email) {
+        alert("Please fill all fields");
+        return;
+    }
+
+    const { data, error } = await supabase
+        .from("Leads")
+        .insert([{ name, email }]);
+
+    if (error) {
+        console.error(error);
+        alert("Error: " + error.message);
+    } else {
+        alert("You're in! 🚀");
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+    }
+};
+</script>
+
+</body>
+</html>
