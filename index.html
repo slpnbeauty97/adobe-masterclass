@@ -390,41 +390,41 @@ setInterval(() => {
 },1000);
 </script>
 
-<!-- SUPABASE (ONLY ONCE) -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<!-- SUPABASE SDK (IMPORTANT: MUST BE BEFORE SCRIPT) -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
-/* ✅ SINGLE SUPABASE INSTANCE */
+/* ✅ SINGLE CLEAN INIT */
 const supabase = window.supabase.createClient(
     "https://vyddfaxugzbfzrsqxwlh.supabase.co",
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ5ZGRmYXh1Z3piZnpyc3F4d2xoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc3MDQxNDIsImV4cCI6MjA5MzI4MDE0Mn0.mz9e5kwzSHm7zpGwrTXQ3cDiu6s5CF2CB3DRn4xuI4A"
+   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ5ZGRmYXh1Z3piZnpyc3F4d2xoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc3MDQxNDIsImV4cCI6MjA5MzI4MDE0Mn0.mz9e5kwzSHm7zpGwrTXQ3cDiu6s5CF2CB3DRn4xuI4A"
 );
 
-/* ✅ SINGLE FUNCTION (GLOBAL) */
-window.submitLead = async function () {
-    console.log("Clicked");
+/* ✅ BUTTON EVENT */
+document.getElementById("joinBtn").addEventListener("click", submitLead);
 
+async function submitLead() {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
 
     if (!name || !email) {
-        alert("Please fill all fields");
+        alert("Fill all fields");
         return;
     }
 
-    const { data, error } = await supabase
+    const { error } = await supabase
         .from("Leads")
         .insert([{ name, email }]);
 
     if (error) {
         console.error(error);
-        alert("Error: " + error.message);
+        alert(error.message);
     } else {
         alert("You're in! 🚀");
         document.getElementById("name").value = "";
         document.getElementById("email").value = "";
     }
-};
+}
 </script>
 
 </body>
